@@ -1,0 +1,55 @@
+/*
+1. Declare variables
+- String armor, weapons, tools, archeSkills
+2. Create getArchetypeSkills method with int index parameter
+ - Declare String archetypeSkills variable
+ - If index is equal to 0
+  - Initialize armor, weapons, tools, and archeSkills pertaining to Wizard archetype
+  - Combine all in archetypeSkills variable
+- If index is equal to 1
+  - Initialize armor, weaponse, tools, and archeSkills pertaining to a Fighter archetype
+  - Combine all in archetypeSkills variable
+- If index is equal to 2
+  - Initialize armor, weapons, tools, and archeSkills pertaining to a Rogue archetype
+  - Combine all in archetypeSkills variable
+- Return archetypeSkills of String type
+*/
+
+public class Archetype
+{
+	private String armor;
+	private String weapons;
+	private String tools;
+	private String archeSkills;
+
+	public String getArchetypeSkills(int index)
+	{
+		String archetypeSkills;
+
+		if (index == 0) //wizard
+		{
+			armor = "None";
+			weapons = "Daggers, darts, slings, quarterstaffs, light crossbows";
+			tools = "None";
+			archeSkills = "Choose two from Arcana, History, Insight, Investigation, Medicine, and Religion";
+			archetypeSkills = "Wizard Stats\nArmor: " + armor + " - Weapons: " + weapons + " - Tools: " + tools + " - Skills: " + archeSkills;
+		}
+		else if (index == 1) //fighter
+		{
+			armor = "All armor, shields";
+			weapons = "Simple weapons, martial weapons";
+			tools = "None";
+			archeSkills = "Choose two from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, and Survival";
+			archetypeSkills = "Fighter Stats\nArmor: " + armor + " - Weapons: " + weapons + " - Tools: " + tools + " - Skills: " + archeSkills;
+		}
+		else //rogue
+		{
+			armor = "Light Armor";
+			weapons = "Simple weapons, hand crossbows, longswords, rapiers, shortswords";
+			tools = "Thieves' tools";
+			archeSkills = "Choose four from Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, and Stealth";
+			archetypeSkills = "Rogues Stats\nArmor: " + armor + " - Weapons: " + weapons + " - Tools: " + tools + " - Skills: " + archeSkills;
+		}
+		return archetypeSkills;
+	}
+}
